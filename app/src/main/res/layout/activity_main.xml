@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.qurratufalmuriat.ujianosca.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <!--ISI NAMA-->
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="25"
+            android:hint="Nama"
+            android:inputType="textPersonName"
+            android:textSize="18dp" />
+
+        <!--ISI NIM-->
+        <EditText
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:hint="NIM"
+            android:inputType="number"
+            android:textSize="18dp" />
+
+        <!--KASUS-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KASUS 1"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tanggal 25 Januari 2018 Ny. R datang ke bidan untuk memeriksakan kehamilannya, dia menyatakan baru pertama kali hamil dan mengeluh mual, HPHT tanggal 12 Desember 2017. Hasil pemeriksaan TD:110/70 mmHg; N:88x/i."
+            android:layout_margin="5dp"
+            android:textColor="#000"
+            android:textSize="16dp"/>
+
+        <!--PERTANYAAN 1 / TEXT VIEW -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN 1"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Apakah diagnosa untuk kasus tersebut?"
+            android:textColor="#000"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/jawabtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:ems="10"
+            android:hint="Tulis jawaban"
+            android:inputType="text"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:onClick="onTextView"/>
+
+        <!--PERTANYAAN 2 / RADIO BUTTON -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN 2"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Kehamilan Ny. R termasuk dalam trimester..."
+            android:textColor="#000"
+            android:textSize="16dp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:layout_width="347dp"
+                    android:layout_height="wrap_content"
+                    android:text="Trimester I"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:layout_width="347dp"
+                    android:layout_height="wrap_content"
+                    android:text="Trimester II"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <RadioButton
+                    android:id="@+id/radio3"
+                    android:layout_width="347dp"
+                    android:layout_height="wrap_content"
+                    android:text="Trimester III"
+                    android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+        <!--PERTANYAAN 3 / CHECKBOX -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN 3"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Untuk mengatasi ketidaknyamanan Ny.R dianjurkan..."
+            android:textColor="#000"
+            android:textSize="16dp" />
+
+        <CheckBox
+            android:id="@+id/pilihan1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Menganjurkan makan sedikit tapi sering"
+            android:onClick="onCheckboxClicked"/>
+
+        <CheckBox
+            android:id="@+id/pilihan2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Menganjurkan istirahat dan tehnik relaksasi"
+            android:onClick="onCheckboxClicked"/>
+
+        <CheckBox
+            android:id="@+id/pilihan3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Hindari makanan yang berminyak"
+            android:onClick="onCheckboxClicked"/>
+
+        <CheckBox
+            android:id="@+id/pilihan4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Menganjurkan minum air minimal 8 gelas perhari"
+            android:onClick="onCheckboxClicked"/>
+
+        <CheckBox
+            android:id="@+id/pilihan5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Hindari makanan yang berbau tajam"
+            android:onClick="onCheckboxClicked"/>
+
+        <!--PERTANYAAN 4 / DATE-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN 4"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Ny. R diperkirakan melahirkan pada tanggal"
+            android:textColor="#000"
+            android:textSize="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:hint="dd/mm/yyyy"
+            android:inputType="date" />
+
+        <!--SUBMIT RESET-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="SUBMIT"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#fff"
+                android:onClick="submit"/>
+
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Reset"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#fff"
+                android:onClick="reset"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</ScrollView>
